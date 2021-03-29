@@ -1,0 +1,31 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "rootDir": "./",
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "jsx": "react",
+        "jsxFactory": "tsx",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "./out",
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2019"
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+    ],
+    "exclude": [
+        "out",
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

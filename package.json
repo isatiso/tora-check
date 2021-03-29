@@ -1,0 +1,50 @@
+{
+    "name": "tora-check",
+    "version": "0.0.1",
+    "description": "Configuration check for Tora.",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "module": "./lib/index.esm.js",
+    "bin": {
+        "tora-check": "tora-check.js",
+        "tora-schema": "tora-schema.js"
+    },
+    "files": [
+        "lib"
+    ],
+    "keywords": [
+        "tora",
+        "config",
+        "di",
+        "typescript"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/isatiso/tora-check.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/isatiso/tora-check/issues"
+    },
+    "homepage": "https://github.com/isatiso/tora-check#readme",
+    "dependencies": {
+        "@types/js-yaml": "^4.0.0",
+        "@types/node": "^14.14.37",
+        "ajv": "^8.0.1",
+        "commander": "^7.2.0",
+        "js-yaml": "^4.0.0",
+        "typescript-json-schema": "^0.50.0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-json": "^4.1.0",
+        "rollup": "^2.43.1",
+        "rollup-plugin-dts": "^3.0.1",
+        "rollup-plugin-typescript2": "^0.30.0",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.3"
+    }
+}
