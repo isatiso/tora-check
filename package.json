@@ -6,8 +6,8 @@
     "types": "./lib/index.d.ts",
     "module": "./lib/index.esm.js",
     "bin": {
-        "tora-check": "tora-check.js",
-        "tora-schema": "tora-schema.js"
+        "tora-check": "bin/tora-check.js",
+        "tora-schema": "bin/tora-schema.js"
     },
     "files": [
         "lib"
