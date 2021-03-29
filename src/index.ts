@@ -1,2 +1,2 @@
 export { generateSchema } from './generate-schema'
-export { loadConfig, readSchema } from './check-config-file'
+export { loadConfig, readSchema, checkConfig, checkSingleConfig } from './check-config-file'
