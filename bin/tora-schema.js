@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const process = require("process")
-const {program} = require("commander")
+const process = require('process')
+const {program} = require('commander')
 
-const pkg = require("../package.json")
+const pkg = require('../package.json')
 
 const {generateSchema} = require('../lib')
 
