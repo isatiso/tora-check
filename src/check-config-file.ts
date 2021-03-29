@@ -42,16 +42,16 @@ export function loadConfig(file_path: string) {
 export function checkSingleConfig(file_path: string, validator: ValidateFunction<unknown>) {
     const file_data = loadConfig(file_path)
     if (!validator(file_data)) {
-        console.log('Config File Check Failed:')
-        console.log(`    File -> ${file_path}`)
+        console.error('Config File Check Failed:')
+        console.error(`    File -> ${file_path}`)
         validator.errors?.forEach(err => {
             if (err.params.missingProperty) {
                 const data_path = [err.instancePath, err.params.missingProperty].join('/')
                 const json_path = '$' + data_path.replace(/\//g, '.')
-                console.log(`    ERROR -> "${json_path}" is missing.`)
+                console.error(`    ERROR -> "${json_path}" is missing.`)
             } else {
                 const json_path = '$' + err.instancePath.replace(/\//g, '.')
-                console.log(`    ERROR -> "${json_path}" ${err.message}.`)
+                console.error(`    ERROR -> "${json_path}" ${err.message}.`)
             }
         })
         process.exit(1)
@@ -68,7 +68,7 @@ export function checkConfig(options: {
 
     const target = path.resolve(options.target)
     if (!fs.existsSync(target)) {
-        console.log(`Specified target "${options.target}" not exists.`)
+        console.error(`Specified target "${options.target}" not exists.`)
         process.exit(1)
     }
 
@@ -84,11 +84,11 @@ export function checkConfig(options: {
             }
         }
         if (!deal) {
-            console.log(`No json or yaml file in specified directory "${target}".`)
+            console.error(`No json or yaml file in specified directory "${target}".`)
             process.exit(1)
         }
     } else {
-        console.log(`Specified target "${options.target}" is not file either not directory.`)
+        console.error(`Specified target "${options.target}" is not file either not directory.`)
         process.exit(1)
     }
 }
