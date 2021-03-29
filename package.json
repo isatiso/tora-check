@@ -1,6 +1,6 @@
 {
     "name": "tora-check",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Configuration check for Tora.",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
